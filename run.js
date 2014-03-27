@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 app.get('/latest', function(req, res) {
-  db.find({}).sort({time:-1}).limit(10).exec(function(err, docs){
+  db.find({}).sort({time:-1}).limit(5).exec(function(err, docs){
     if (err) {
       res.statusCode = 503;
       res.send('Error 503: Database service unavailable.');
