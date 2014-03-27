@@ -15,7 +15,7 @@ app.get('/latest', function(req, res) {
       res.statusCode = 503;
       res.send('Error 503: Database service unavailable.');
     } else {
-      res.json(docs.reverse());
+      res.json(docs);
     }
   });
 });
