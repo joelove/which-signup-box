@@ -1,0 +1,11 @@
+{
+  "name": "signup-box-server",
+  "description": "A simple DB API for storing new users.",
+  "author": "Joe Love <joe.love@which.co.uk>",
+  "version": "0.0.1",
+  "dependencies": {
+    "nedb": ">= 0.10.4",
+    "express": "3.x"
+  },
+  "engine": "node 0.10.16"
+}
