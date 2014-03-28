@@ -1,6 +1,6 @@
 {
-  "name": "signup-box-server",
-  "description": "A simple DB API for storing new users.",
+  "name": "which-signup-box",
+  "description": "A fun JavaScript alert service for user sign-ups.",
   "author": "Joe Love <joe.love@which.co.uk>",
   "version": "0.0.1",
   "dependencies": {

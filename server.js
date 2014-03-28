@@ -9,6 +9,12 @@ var Datastore = require('nedb'),
 app.use(express.json());
 app.use(express.urlencoded());
 
+app.all('/', function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  next();
+ });
+
 app.get('/latest', function(req, res) {
   db.find({}).sort({time:-1}).limit(5).exec(function(err, docs){
     if (err) {
@@ -20,7 +26,7 @@ app.get('/latest', function(req, res) {
   });
 });
 
-app.post('/add', function(req, res){
+app.post('/add.gif', function(req, res){
   var id = req.body.id,
       doc;
 
