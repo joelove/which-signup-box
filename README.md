@@ -9,11 +9,11 @@ The project consists of three components:
 2. The server code
 3. The Espruino code
 
-### The browser code (browser.js)
+#### The browser code (browser.js)
 A few lines of code to send a blank POST request to the server. Intended to be injected via GTM.
 
-### The server code (server.js)
+#### The server code (server.js)
 A tiny database API written in Node.js: one page to add a timestamp to a database table when it recieves a blank POST; one to GET a JSON object containing the latest 5 entries.
 
-### The Espruino code (espruino.js)
+#### The Espruino code (espruino.js)
 A simple program to run [on the board](http://www.espruino.com/) that authenticates with a WiFi network then repeatedly queries the API for new entries.
