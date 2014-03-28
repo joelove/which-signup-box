@@ -26,7 +26,7 @@ app.get('/latest', function(req, res) {
   });
 });
 
-app.post('/add.gif', function(req, res){
+app.post('/add', function(req, res){
   var id = req.body.id,
       doc;
 
