@@ -8,11 +8,11 @@ var http = require('http'),
     AccessPointKey = 'AccessPointKey',
     currentTime = 0;
 
-function doAlert() {
-  console.log(currentTime);
+function doBeep() {
+  console.log(currentTime); // Placeholder
 }
 
-function compareData(data) {
+function compareTimestamp(data) {
   var dataLength = data.length,
       hasTime = !!currentTime,
       currentItemTime;
@@ -21,7 +21,7 @@ function compareData(data) {
     currentItemTime = data[--dataLength].time;
     if (currentItemTime > currentTime) {
       currentTime = currentItemTime;
-      hasTime && doAlert();
+      hasTime && doBeep();
     }
   }
 }
@@ -29,12 +29,12 @@ function compareData(data) {
 function getLatest() {
   http.get(apiUrl, function(res) {
     res.on('data', function(data) {
-      compareData(JSON.parse(data));
+      compareTimestamp(JSON.parse(data));
     });
   });
 }
 
-wlan.connect(AccessPointName, AccessPointKey, function(status){
+wlan.connect(AccessPointName, AccessPointKey, function(status) {
   if (status === 'dhcp') {
     setInterval(getLatest, 2500);
   }
