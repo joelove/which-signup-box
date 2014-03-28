@@ -1,6 +1,6 @@
 {
   "name": "which-signup-box",
-  "description": "A fun JavaScript alert service for user sign-ups.",
+  "description": "A simple, fully JavaScript, codebase to allow an Espruino to beep when a user hits a webpage.",
   "author": "Joe Love <joe.love@which.co.uk>",
   "version": "0.0.1",
   "dependencies": {
