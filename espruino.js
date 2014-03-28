@@ -3,6 +3,9 @@
 
 var http = require('http'),
     apiUrl = 'http://which-signup-box.herokuapp.com/latest',
+    // wlan = require('CC3000').connect(),
+    // AccessPointName = 'PlusnetWireless36E321',
+    // AccessPointKey = '********',
     currentTime = 0;
 
 function doAlert() {
@@ -31,4 +34,8 @@ function getLatest() {
   });
 }
 
-setInterval(getLatest, 2500);
+// wlan.connect(AccessPointName, AccessPointKey, function(status){
+//   if (status === 'dhcp') {
+    setInterval(getLatest, 2500);
+//   }
+// });
