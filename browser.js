@@ -1,4 +1,4 @@
-var apiUrl = 'http://which-signup-box.herokuapp.com/add.gif',
+var apiUrl = 'http://which-signup-box.herokuapp.com/add',
     xmlhttp = new (XMLHttpRequest || ActiveXObject)('Microsoft.XMLHTTP');
 
 xmlhttp.open('POST', apiUrl, true);
